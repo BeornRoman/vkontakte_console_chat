@@ -9,7 +9,7 @@ import pyautogui
 class TestMethod(unittest.TestCase):
     def setUp(self):
         options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
+        options.add_argument('headless')
         self.driver = webdriver.Chrome(executable_path='chromedriver.exe', options=options)
         self.driver.implicitly_wait(10)
         self.dialog_procedure = True
